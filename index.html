@@ -111,14 +111,15 @@
     
     <a-assets>
       <!-- Foto Profil 5 Anggota -->
-      <img id="foto-alifa" src="foto-alifa.png" />
-      <img id="foto-aura" src="foto-aura.JPEG" />
-      <img id="foto-fiki" src="foto-fiki.jpeg" />
-      <img id="foto-piki" src="foto-piki.jpeg" />
-      <img id="foto-raihan" src="foto-raihan.png" />
+      <img id="foto-alifa" src="./foto-alifa.jpg" />
+      <img id="foto-aura" src="./foto-aura.jpg" />
+      <img id="foto-fiki" src="./foto-fiki.jpg" />
+      <img id="foto-piki" src="./foto-piki.jpg" />
+      <img id="foto-raihan" src="./foto-raihan.jpg" />
 
       <!-- Ikon Tombol Interaktif -->
       <img id="btn-wa" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" />
+      <img id="btn-linkedin" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
       <img id="btn-cv" src="https://cdn-icons-png.flaticon.com/512/337/337946.png" />
     </a-assets>
 
@@ -129,36 +130,37 @@
     <!-- TARGET 0: ALIFA GUSTIA RAHMI                                          -->
     <!-- ===================================================================== -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <!-- Panel Latar Belakang 3D Elegan -->
       <a-plane position="0 0 -0.02" width="1.15" height="0.65" color="#0f172a" opacity="0.92"></a-plane>
-      <!-- Garis Aksen Atas -->
       <a-plane position="0 0.315 -0.01" width="1.15" height="0.02" color="#38bdf8"></a-plane>
 
-      <!-- Bingkai & Foto Profil (Floating) -->
       <a-entity animation="property: position; to: 0 0.025 0; dir: alternate; dur: 1600; easing: easeInOutSine; loop: true">
         <a-plane position="-0.33 0.02 0" width="0.42" height="0.42" color="#38bdf8"></a-plane>
         <a-image src="#foto-alifa" position="-0.33 0.02 0.01" width="0.39" height="0.39"></a-image>
       </a-entity>
 
-      <!-- Informasi Nama & Jabatan -->
-      <a-text value="Alifa Gustia Rahmi" position="-0.06 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
-      <a-text value="UI/UX Designer" position="-0.06 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
-      
-      <!-- Garis Pemisah Halus -->
-      <a-plane position="0.22 0.03 0.01" width="0.56" height="0.005" color="#334155"></a-plane>
+      <a-text value="Alifa Gustia Rahmi" position="-0.08 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
+      <a-text value="Lead WebAR Developer" position="-0.08 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
+      <a-plane position="0.21 0.03 0.01" width="0.58" height="0.005" color="#334155"></a-plane>
 
       <!-- Tombol 1: WhatsApp -->
-      <a-entity position="0.04 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6281998341269', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('https://wa.me/6281998341269', '_blank')"></a-image>
-        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.00 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6281998341269', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://wa.me/6281998341269', '_blank')"></a-image>
+        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
 
-      <!-- Tombol 2: CV PDF -->
-      <a-entity position="0.32 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('cv-alifa.pdf', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('cv-alifa.pdf', '_blank')"></a-image>
-        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <!-- Tombol 2: LinkedIn -->
+      <a-entity position="0.21 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://www.linkedin.com/in/alifa-gustia-rahmi-804654270/', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-linkedin" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://www.linkedin.com/in/alifa-gustia-rahmi-804654270/', '_blank')"></a-image>
+        <a-text value="LinkedIn" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
+      </a-entity>
+
+      <!-- Tombol 3: CV PDF -->
+      <a-entity position="0.42 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('./cv-alifa.pdf', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('./cv-alifa.pdf', '_blank')"></a-image>
+        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
     </a-entity>
 
@@ -174,20 +176,26 @@
         <a-image src="#foto-aura" position="-0.33 0.02 0.01" width="0.39" height="0.39"></a-image>
       </a-entity>
 
-      <a-text value="Aura Alima Thufailah" position="-0.06 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
-      <a-text value="UI/UX Designer" position="-0.06 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
-      <a-plane position="0.22 0.03 0.01" width="0.56" height="0.005" color="#334155"></a-plane>
+      <a-text value="Aura Alima Thufailah" position="-0.08 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
+      <a-text value="QA & Documentation Lead" position="-0.08 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
+      <a-plane position="0.21 0.03 0.01" width="0.58" height="0.005" color="#334155"></a-plane>
 
-      <a-entity position="0.04 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6281111160365', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('https://wa.me/6281111160365', '_blank')"></a-image>
-        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.00 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6281111160365', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://wa.me/6281111160365', '_blank')"></a-image>
+        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
 
-      <a-entity position="0.32 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('cv-aura.pdf', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('cv-aura.pdf', '_blank')"></a-image>
-        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.21 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://www.instagram.com/auraathflh?obrf=NDNqb21tOXBka3F3', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-instagram" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://www.instagram.com/auraathflh?obrf=NDNqb21tOXBka3F3', '_blank')"></a-image>
+        <a-text value="Instagram" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
+      </a-entity>
+
+      <a-entity position="0.42 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('./cv-aura.pdf', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('./cv-aura.pdf', '_blank')"></a-image>
+        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
     </a-entity>
 
@@ -203,20 +211,26 @@
         <a-image src="#foto-fiki" position="-0.33 0.02 0.01" width="0.39" height="0.39"></a-image>
       </a-entity>
 
-      <a-text value="Fiki Haryono" position="-0.06 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
-      <a-text value="UI/UX Designer" position="-0.06 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
-      <a-plane position="0.22 0.03 0.01" width="0.56" height="0.005" color="#334155"></a-plane>
+      <a-text value="Fiki Haryono" position="-0.08 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
+      <a-text value="Asset & Compiler Specialist" position="-0.08 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
+      <a-plane position="0.21 0.03 0.01" width="0.58" height="0.005" color="#334155"></a-plane>
 
-      <a-entity position="0.04 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6285794345930', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('https://wa.me/6285794345930', '_blank')"></a-image>
-        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.00 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6285794345930', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://wa.me/6285794345930', '_blank')"></a-image>
+        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
 
-      <a-entity position="0.32 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('cv-fiki.pdf', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('cv-fiki.pdf', '_blank')"></a-image>
-        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.21 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://www.instagram.com/fikihryn_?rpxt=OXJzYzc5Nzc3bHA3', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-instagram" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://www.instagram.com/fikihryn_?rpxt=OXJzYzc5Nzc3bHA3', '_blank')"></a-image>
+        <a-text value="Instagram" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
+      </a-entity>
+
+      <a-entity position="0.42 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('./cv-fiki.pdf', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('./cv-fiki.pdf', '_blank')"></a-image>
+        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
     </a-entity>
 
@@ -232,20 +246,26 @@
         <a-image src="#foto-piki" position="-0.33 0.02 0.01" width="0.39" height="0.39"></a-image>
       </a-entity>
 
-      <a-text value="Piki Alpian" position="-0.06 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
-      <a-text value="UI/UX Designer" position="-0.06 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
-      <a-plane position="0.22 0.03 0.01" width="0.56" height="0.005" color="#334155"></a-plane>
+      <a-text value="Piki Alpian" position="-0.08 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
+      <a-text value="UI/UX & Card Designer" position="-0.08 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
+      <a-plane position="0.21 0.03 0.01" width="0.58" height="0.005" color="#334155"></a-plane>
 
-      <a-entity position="0.04 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6285793630448', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('https://wa.me/6285793630448', '_blank')"></a-image>
-        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.00 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/6285793630448', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://wa.me/6285793630448', '_blank')"></a-image>
+        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
 
-      <a-entity position="0.32 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('cv-piki.pdf', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('cv-piki.pdf', '_blank')"></a-image>
-        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.21 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://www.linkedin.com/in/pikialpian/', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-linkedin" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://www.linkedin.com/in/pikialpian/', '_blank')"></a-image>
+        <a-text value="LinkedIn" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
+      </a-entity>
+
+      <a-entity position="0.42 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('./cv-piki.pdf', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('./cv-piki.pdf', '_blank')"></a-image>
+        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
     </a-entity>
 
@@ -261,20 +281,26 @@
         <a-image src="#foto-raihan" position="-0.33 0.02 0.01" width="0.39" height="0.39"></a-image>
       </a-entity>
 
-      <a-text value="M. Raihan Firdaus K." position="-0.06 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
-      <a-text value="UI/UX Designer" position="-0.06 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
-      <a-plane position="0.22 0.03 0.01" width="0.56" height="0.005" color="#334155"></a-plane>
+      <a-text value="M. Raihan Firdaus K." position="-0.08 0.17 0.01" color="#ffffff" align="left" width="1.45" font="roboto"></a-text>
+      <a-text value="Project Leader" position="-0.08 0.09 0.01" color="#38bdf8" align="left" width="1.1" font="roboto"></a-text>
+      <a-plane position="0.21 0.03 0.01" width="0.58" height="0.005" color="#334155"></a-plane>
 
-      <a-entity position="0.04 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/62895622500282', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('https://wa.me/62895622500282', '_blank')"></a-image>
-        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.00 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://wa.me/62895622500282', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-wa" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://wa.me/62895622500282', '_blank')"></a-image>
+        <a-text value="WhatsApp" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
 
-      <a-entity position="0.32 -0.13 0.02">
-        <a-plane class="clickable" width="0.22" height="0.20" color="#1e293b" onclick="window.open('cv-raihan.pdf', '_blank')"></a-plane>
-        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.09" height="0.09" onclick="window.open('cv-raihan.pdf', '_blank')"></a-image>
-        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.75"></a-text>
+      <a-entity position="0.21 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('https://www.linkedin.com/in/mraihanfirdausk/', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-linkedin" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('https://www.linkedin.com/in/mraihanfirdausk/', '_blank')"></a-image>
+        <a-text value="LinkedIn" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
+      </a-entity>
+
+      <a-entity position="0.42 -0.13 0.02">
+        <a-plane class="clickable" width="0.175" height="0.20" color="#1e293b" onclick="window.open('./cv-raihan.pdf', '_blank')"></a-plane>
+        <a-image class="clickable" src="#btn-cv" position="0 0.025 0.01" width="0.08" height="0.08" onclick="window.open('./cv-raihan.pdf', '_blank')"></a-image>
+        <a-text value="Lihat CV" position="0 -0.055 0.01" color="#e2e8f0" align="center" width="0.62"></a-text>
       </a-entity>
     </a-entity>
 
